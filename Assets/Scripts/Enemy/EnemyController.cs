@@ -10,7 +10,8 @@ namespace CosmicCuration.Enemy
         // Dependencies:
         private EnemyView enemyView;
         private EnemyData enemyData;
-
+        private EnemyPool enemyPool;
+        private EnemyScriptableObject enemyScriptableObject;
         // Variables:
         private EnemyState currentEnemyState;
         private int currentHealth;
@@ -23,6 +24,7 @@ namespace CosmicCuration.Enemy
             enemyView = Object.Instantiate(enemyPrefab);
             enemyView.SetController(this);
             this.enemyData = enemyData;
+
         }
 
         public void Configure(Vector3 positionToSet, EnemyOrientation enemyOrientation)
@@ -34,6 +36,7 @@ namespace CosmicCuration.Enemy
             currentHealth = enemyData.maxHealth;
             speed = Random.Range(enemyData.minimumSpeed, enemyData.maximumSpeed);
             movementTimer = enemyData.movementDuration;
+            enemyView.gameObject.SetActive(true);
         }
 
         private void SetEnemyOrientation(EnemyOrientation orientation)
@@ -106,7 +109,9 @@ namespace CosmicCuration.Enemy
             GameService.Instance.GetUIService().IncrementScore(enemyData.scoreToGrant);
             GameService.Instance.GetSoundService().PlaySoundEffects(SoundType.EnemyDeath);
             GameService.Instance.GetVFXService().PlayVFXAtPosition(VFXType.EnemyExplosion, enemyView.transform.position);
-            Object.Destroy(enemyView.gameObject);
+            // Object.Destroy(enemyView.gameObject);
+            enemyView.gameObject.SetActive(false);
+            GameService.Instance.GetEnemyService().ReturnEnemyToPool(this);
         }
 
         private enum EnemyState
