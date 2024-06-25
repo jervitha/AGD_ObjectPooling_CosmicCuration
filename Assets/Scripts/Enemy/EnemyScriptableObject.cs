@@ -24,5 +24,5 @@ namespace CosmicCuration.Enemy
         public float movementDuration;
         public float rotationSpeed;
         public float rotationTolerance;
-    } 
+    }
 }

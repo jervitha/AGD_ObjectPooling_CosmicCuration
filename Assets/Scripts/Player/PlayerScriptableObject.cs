@@ -10,5 +10,5 @@ namespace CosmicCuration.Player
         public float defaultFireRate;
         public float rapidFireRate;
         public int deathDelay;
-    } 
+    }
 }

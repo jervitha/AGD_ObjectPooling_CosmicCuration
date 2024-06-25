@@ -17,5 +17,5 @@ namespace CosmicCuration.Player
         private void Update() => playerController.HandlePlayerInput();
 
         public void TakeDamage(int damageToTake) => playerController.TakeDamage(damageToTake);
-    } 
+    }
 }

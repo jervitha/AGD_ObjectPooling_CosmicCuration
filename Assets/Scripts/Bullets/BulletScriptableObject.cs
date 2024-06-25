@@ -7,5 +7,5 @@ namespace CosmicCuration.Bullets
     {
         public float speed;
         public int damage;
-    } 
+    }
 }

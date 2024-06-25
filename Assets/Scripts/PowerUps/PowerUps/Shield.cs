@@ -18,5 +18,5 @@ namespace CosmicCuration.PowerUps
             base.Deactivate();
             GameService.Instance.GetPlayerService().GetPlayerController().SetShieldState(ShieldState.Deactivated);
         }
-    } 
+    }
 }

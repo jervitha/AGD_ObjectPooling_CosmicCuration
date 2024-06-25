@@ -18,5 +18,5 @@ namespace CosmicCuration.Utilities
                 Destroy(gameObject);
             }
         }
-    } 
+    }
 }

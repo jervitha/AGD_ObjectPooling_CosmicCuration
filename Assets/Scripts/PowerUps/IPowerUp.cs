@@ -5,5 +5,5 @@ namespace CosmicCuration.PowerUps
         public void Activate();
 
         public void Deactivate();
-    } 
+    }
 }

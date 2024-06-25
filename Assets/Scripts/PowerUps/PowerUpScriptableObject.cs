@@ -17,5 +17,5 @@ namespace CosmicCuration.PowerUps
         public PowerUpType powerUpType;
         public PowerUpView powerUpPrefab;
         public float activeDuration;
-    } 
+    }
 }

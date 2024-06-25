@@ -5,5 +5,5 @@ namespace CosmicCuration.PowerUps
         Shield,
         RapidFire,
         DoubleTurret
-    } 
+    }
 }

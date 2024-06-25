@@ -9,5 +9,5 @@ namespace CosmicCuration.PowerUps
         public void SetController(PowerUpController controller) => powerUpController = controller;
 
         private void OnTriggerEnter2D(Collider2D collision) => powerUpController?.PowerUpTriggerEntered(collision.gameObject);
-    } 
+    }
 }

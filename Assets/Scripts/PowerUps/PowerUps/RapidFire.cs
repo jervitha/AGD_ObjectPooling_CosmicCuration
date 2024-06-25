@@ -15,5 +15,5 @@ namespace CosmicCuration.PowerUps
             base.Deactivate();
             GameService.Instance.GetPlayerService().GetPlayerController().ToggleRapidFire(false);
         }
-    } 
+    }
 }

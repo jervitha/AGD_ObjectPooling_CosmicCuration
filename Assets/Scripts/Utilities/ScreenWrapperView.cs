@@ -16,7 +16,7 @@ public class ScreenWrapperView : MonoBehaviour
     {
         if (!hasEnteredScreen)
             CheckIfEntered();
-        else if(RendererComponent.isVisible)
+        else if (RendererComponent.isVisible)
             WrapObjectOnScreen();
     }
 
